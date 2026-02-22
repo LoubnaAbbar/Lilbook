@@ -1,0 +1,297 @@
+:root{
+  --bg:#050508;          
+  --bg-soft:#111317;     
+  --card:#0f1115;      
+  --card-soft:#181b21;
+
+  --text:#f9fafb;        
+  --muted:#9ca3af;      
+
+  --accent:#9BAC7B;     
+  --accent-soft:#dfe5c4; 
+  --accent-dark:#7a8e5c;
+
+  --success:#9BAC7B;
+  --danger:#f97373;
+
+  --radius:12px;
+}
+
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:24px;
+  font-family:'Montserrat',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+
+.container{
+  max-width:900px;
+  margin:0 auto;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:24px 24px 20px;
+  border:1px solid #1f2933;
+}
+
+
+h1{
+  margin:0 0 8px 0;
+  font-size:26px;
+  font-weight:800;
+  letter-spacing:-0.03em;
+  color:var(--accent-soft);
+}
+
+h2{
+  margin:20px 0 10px 0;
+  font-size:19px;
+  font-weight:700;
+  color:var(--accent);
+}
+
+h3{
+  margin:0 0 6px 0;
+  font-size:15px;
+  font-weight:700;
+  color:var(--accent-soft);
+}
+
+p{
+  margin:8px 0;
+  font-size:14px;
+  color:var(--muted);
+}
+
+a{
+  color:var(--accent-soft);
+  text-decoration:none;
+  font-weight:600;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+nav{
+  margin:16px 0 20px 0;
+  padding:10px 12px;
+  background:var(--bg-soft);
+  border-radius:999px;
+  border:1px solid #1f2933;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+}
+
+nav span{
+  font-size:13px;
+  color:var(--muted);
+}
+
+nav a{
+  padding:6px 12px;
+  border-radius:999px;
+  border:1px solid transparent;
+  color:var(--accent-soft);
+  background:transparent;
+  font-size:13px;
+  font-weight:600;
+  transition:background .15s ease,border-color .15s ease;
+}
+
+nav a:hover{
+  background:#111317;
+  border-color:var(--accent);
+}
+
+
+.success,
+.error{
+  padding:9px 11px;
+  border-radius:9px;
+  margin:12px 0;
+  font-size:13px;
+}
+
+.success{
+  background:rgba(155,172,123,0.1);
+  border:1px solid rgba(155,172,123,0.5);
+  color:#dbe7b1;
+}
+
+.error{
+  background:rgba(248,113,113,0.08);
+  border:1px solid rgba(248,113,113,0.5);
+  color:#fecaca;
+}
+
+.form-group{
+  margin-bottom:14px;
+}
+
+label{
+  display:block;
+  margin-bottom:5px;
+  font-size:12px;
+  font-weight:600;
+  color:var(--accent-soft);
+}
+
+input,
+textarea{
+  width:100%;
+  padding:9px 11px;
+  border-radius:8px;
+  border:1px solid #252b36;
+  font-family:'Montserrat',sans-serif;
+  font-size:14px;
+  background:#050608;
+  color:var(--text);
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:#4b5563;
+}
+
+input:focus,
+textarea:focus{
+  outline:none;
+  border-color:var(--accent);
+}
+
+
+button{
+  background:var(--accent);
+  color:#050608;
+  border:none;
+  padding:9px 16px;
+  border-radius:999px;
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+button:hover{
+  background:var(--accent-dark);
+}
+
+
+.book-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin-top:10px;
+}
+
+.book-item{
+  background:var(--card-soft);
+  border-radius:10px;
+  padding:12px;
+  border:1px solid #1f2933;
+}
+
+.book-item h3 a{
+  font-weight:700;
+}
+
+.book-item p{
+  font-size:13px;
+  color:var(--muted);
+}
+
+.book-item em{
+  font-style:normal;
+  color:#9ca3af;
+  font-size:12px;
+}
+
+
+.admin-actions{
+  margin-top:8px;
+  display:flex;
+  gap:8px;
+}
+
+.admin-actions a{
+  background:#050608;
+  color:var(--accent-soft);
+  padding:5px 9px;
+  border-radius:7px;
+  font-size:11px;
+  font-weight:600;
+  text-decoration:none;
+  border:1px solid #252b36;
+}
+
+.admin-actions a:hover{
+  background:#111317;
+}
+
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:14px;
+  background:var(--card-soft);
+  border-radius:10px;
+  overflow:hidden;
+  border:1px solid #1f2933;
+}
+
+thead tr{
+  background:#111317;
+}
+
+th,
+td{
+  padding:9px 8px;
+  text-align:left;
+  border-bottom:1px solid #1f2933;
+  font-size:13px;
+}
+
+th{
+  font-weight:600;
+  color:#9ca3af;
+  font-size:11px;
+  text-transform:uppercase;
+}
+
+tr:last-child td{
+  border-bottom:none;
+}
+
+table button{
+  background:#3f1313;
+  color:#fecaca;
+  padding:5px 8px;
+  font-size:11px;
+  border-radius:7px;
+  border:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+  .container{
+    padding:18px 16px;
+  }
+
+  body{
+    padding:16px;
+  }
+
+  .book-list{
+    grid-template-columns:1fr;
+  }
+}
